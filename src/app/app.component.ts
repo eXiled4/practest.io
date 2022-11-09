@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-declare const randy:any;
+declare const randy:any
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ declare const randy:any;
 export class AppComponent {
   title = 'TITLE nAMe';
   champions = ["Lucian", "Nami", "Garen", "Sett", "Zeri"]
+  parentData = "PrintThisText";
 
   //Property 'page' has no initializer and is not definitely assigned in the constructor.
   // stackoverflow fix:
@@ -18,17 +19,25 @@ export class AppComponent {
             //...
           //}
 
-  randyNum = <[]>randy()
+
+randomFx = <[]>randy()
+
+page = 1
+itemsToDisplay = 8
+
+pageChanger(event){
+  this.page = event
+}
+
+
+  // randyNum = <[]>randy()
+
+
 
   // randyNum = <[]>randy().sort(function(a, b){return b - a})
 
-  //When function assigned to variable - can chain further methods like .sort()
-  page = 1
-  itemsToDisplay = 10
+  //When function assigned to variable - can chain further methods like .sort(), .filter()
 
-  pageChanger(event){
-    this.page = event
-  }
 
 
   //NOT!!!! page: 1 BUTTTT page= 1!!!

@@ -22,20 +22,27 @@
     <li *ngFor="let champ of champions">{{champ}}</li>
 </ol>
 <br> -->
-<h1>Pagination Practice </h1>
+<!-- <app-formz [p_title]="parentData">{{parentData}}</app-formz> -->
+<!-- <h1>Pagination Practice </h1> -->
 
-<ul *ngFor="let abc of randyNum | paginate: {currentPage: page, itemsPerPage: itemsToDisplay}">
-    <li>
+<!-- <ul *ngFor="let abc of randyNum | paginate: {currentPage: page, itemsPerPage: itemsToDisplay}">
+    <li> -->
         <!-- {{abc}} -->
-        {{abc | piping}}
+        <!-- {{abc | piping}}
     </li>
 </ul>
 
-<pagination-controls (pageChange)="pageChanger($event)"></pagination-controls>
+<pagination-controls (pageChange)="pageChanger($event)"></pagination-controls> -->
 
 <!-- Ensure that when writing the function inside pagination-controls that the $ is added inside the argument of the function that binds the page to the event -->
     <!-- <div *ngFor="let y of randyNum | paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">
         {{y}}
     </div> -->
+<h1>TESTING 123</h1>
+
+<div *ngFor="let ran of randomFx | paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">{{ran}}</div>
+<pagination-controls (pageChange)="pageChanger($event)"></pagination-controls>
+
+<app-lists></app-lists>
 
 <router-outlet></router-outlet>

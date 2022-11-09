@@ -1,0 +1,15 @@
+#fHeading {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 2cm;
+}
+
+.pForm {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 3cm;
+  margin-bottom: 5cm;
+  border-bottom: 5cm;
+}
