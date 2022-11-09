@@ -16,6 +16,26 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<h1>Test</h1>
+<!-- <h1>Test</h1>
+<h2>This is interpolation: <b>{{title}}</b></h2>
+<ol>
+    <li *ngFor="let champ of champions">{{champ}}</li>
+</ol>
+<br> -->
+<h1>Pagination Practice </h1>
+
+<ul *ngFor="let abc of randyNum | paginate: {currentPage: page, itemsPerPage: itemsToDisplay}">
+    <li>
+        <!-- {{abc}} -->
+        {{abc | piping}}
+    </li>
+</ul>
+
+<pagination-controls (pageChange)="pageChanger($event)"></pagination-controls>
+
+<!-- Ensure that when writing the function inside pagination-controls that the $ is added inside the argument of the function that binds the page to the event -->
+    <!-- <div *ngFor="let y of randyNum | paginate: {itemsPerPage: itemsToDisplay, currentPage: page}">
+        {{y}}
+    </div> -->
 
 <router-outlet></router-outlet>

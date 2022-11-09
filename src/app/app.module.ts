@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PipingPipe } from './piping.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PipingPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
